@@ -20,7 +20,8 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				sans : ['Inter', 'system-ui', '-apple-system', 'sans-serif']
-			}
+			},
+			dropShadow: ['group-hover']
 		}
 	},
 	plugins: [],

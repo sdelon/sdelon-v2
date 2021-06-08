@@ -1,5 +1,6 @@
 <script>
-    export let src, alt, styles
+    import imgix, { placeholder } from 'svelte-imgix'
+    export let src, alt, styles, width, height
 </script>
 
-<img {src} {alt} class="{styles}">
+<img use:imgix={src} src={placeholder(src)} loading="lazy" {width} {height} {alt} class="{styles}">
