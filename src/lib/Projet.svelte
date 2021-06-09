@@ -11,6 +11,8 @@
         <Img 
         src={slice.image.url}
         alt={slice.image.alt}
+        width={slice.image.dimensions.width}
+        height={slice.image.dimensions.height}
         styles="p-5 relative z-10"/>
         <div class="bg-yellow w-1/3 h-1/3 absolute top-0 {isImgRight ? 'md:right-0' : 'left-0'}"></div>
     </div>
