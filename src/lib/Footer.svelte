@@ -1,4 +1,5 @@
 <script>
+    import { scrollTo } from 'svelte-scrolling'
     import logoSD from '../../static/assets/logo-sd-bleu.png'
     import urlFb from '../../static/assets/icon-library.svg#icon-facebook'
     import urlTwitter from '../../static/assets/icon-library.svg#icon-twitter'
@@ -7,6 +8,11 @@
     $: year = new Date().getFullYear()
 </script>
 
+<style>
+    li > a {
+        @apply text-sm text-bleu-dark hover:text-bleu-lighter;
+    }
+</style>
 
 <footer class="bg-gray-bg py-20">
     <div class="container px-4 mx-auto text-center">
@@ -15,11 +21,21 @@
       </a>
       <nav aria-label="navigation pied de page">
           <ul class="my-6 flex flex-wrap gap-4 lg:gap-8 items-center justify-center">
-            <li class="mb-2 md:mb-0"><a class="text-sm text-bleu-dark hover:text-bleu-lighter" href="/">Accueil</a></li>
-            <li class="mb-2 md:mb-0"><a class="text-sm text-bleu-dark hover:text-bleu-lighter" href="/#services">Services</a></li>
-            <li class="mb-2 md:mb-0"><a class="text-sm text-bleu-dark hover:text-bleu-lighter" href="/#projets">Projets</a></li>
-            <li sveltekit:prefetch class="mb-2 md:mb-0"><a class="text-sm text-bleu-dark hover:text-bleu-lighter" href="/photographies">Photographies</a></li>
-            <li sveltekit:prefetch class="mb-2 md:mb-0"><a class="text-sm text-bleu-dark hover:text-bleu-lighter" href="/contact">Contact</a></li>
+            <li class="mb-2 md:mb-0">
+                <a href="/">Accueil</a>
+            </li>
+            <li class="mb-2 md:mb-0">
+                <a use:scrollTo={'services'} href="/#services">Services</a>
+            </li>
+            <li class="mb-2 md:mb-0">
+                <a use:scrollTo={'projets'} href="/#projets">Projets</a>
+            </li>
+            <li sveltekit:prefetch class="mb-2 md:mb-0">
+                <a href="/photographies">Photographies</a>
+            </li>
+            <li sveltekit:prefetch class="mb-2 md:mb-0">
+                <a href="/contact">Contact</a>
+            </li>
           </ul>
       </nav>
       <div aria-label="liens réseaux sociaux">
