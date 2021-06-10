@@ -12,6 +12,7 @@
 
 <script>
     import PrismicDom from 'prismic-dom'
+    import SEOHead from '$lib/SEOHead.svelte'
     import CTALink from '$lib/UI/CTALink.svelte'
     import Img from '$lib/UI/Img.svelte'
     import Service from '$lib/Service.svelte'
@@ -31,13 +32,20 @@
     }
 </script>
 
+<SEOHead
+	title="Accueil | Stéphanie Delon"
+	description="Développeuse web et graphiste située dans le Cap Sizun en Finistère, découvrez ici les services que je vous propose ainsi que mes plus récents projets | Stéphanie Delon"
+	image=""
+	alt="" />
+
 <section class="container py-16">
-    <div class="w-full text-center">
-        <p class="text-gray-600 uppercase text-sm tracking-wide pb-3">{PrismicDom.RichText.asText(accueil.data.sous_titre)}</p>
+    <div class="flex flex-wrap items-center text-center lg:text-left -mx-2">
+      <div class="lg:w-1/2 px-2 lg:pr-10 mt-10 lg:mt-0 order-1 lg:order-none">
+        <p class="text-gray-light uppercase text-sm tracking-wide pb-3">{PrismicDom.RichText.asText(accueil.data.sous_titre)}</p>
         <div class="relative">
             <h1 class="text-5xl font-black text-gray-800 max-w-2xl mx-auto">{extractMotUnderline(accueil.data.titre_principal[0].text, accueil.data.mot_underline)} <span class="relative">
                 {accueil.data.mot_underline}
-                <div class="absolute -bottom-10 right-0 -mr-10">
+                <div class="absolute -bottom-7 right-0 -mr-10">
                     <svg class="svg-shadow" width="176" height="78" viewBox="0 0 176 78" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4.16866 49.7734C49.6249 56.8271 214.397 64.3995 159.471 26.2365" stroke="#F9F871" stroke-width="6" stroke-linecap="round"/>
                     </svg>                    
@@ -45,26 +53,25 @@
             </span>                 
             </h1>
         </div>
-        <CTALink 
-        texte={accueil.data.texte_lien_cta}
-        isLink={true}
-        link="contact"
-        spacing='my-20' />
-    </div>
-    <div class="w-full relative">
+        <p class="mt-8 text-gray-light leading-relaxed">Professional, dedicated, local. Dunder Mifflin is on its best patch to change the way you think about paper. That’s us - people who sell limitless paper in the paperless world.</p>
+        <div>
+            <CTALink 
+            texte={accueil.data.texte_lien_cta}
+            isLink={true}
+            link="contact"
+            spacing='my-12' />
+        </div>
+      </div>
+      <div class="lg:w-1/2 px-2">
         <Img 
         src="/static/assets/illu_intro.png" 
-        alt=""
-        styles="md:w-1/2 mx-auto relative z-10"/>
-        <Img
-        src="/static/assets/Circle-bg-yellow.png"
-        alt=""
-        styles="absolute bottom-10 inset-x-0" />
+        alt="" />
+    </div>
     </div>
 </section>
 {#each accueil.data.body as slice}
     {#if slice.slice_type === 'services'}
-<section id="services" class="container py-16">
+<section id="services" aria-labelledby="services" class="container py-16">
         <div>
             <h2 class="text-4xl font-bold text-gray-800 max-w-2xl pb-20">{extractMotUnderline(slice.primary.titre_section[0].text, slice.primary.mot_underline1)} <span class="relative">
                 {slice.primary.mot_underline1}
@@ -84,7 +91,7 @@
 </section>
     {/if}
     {#if slice.slice_type === 'projets'}
-<section id="projets" class="container py-16">
+<section id="projets" aria-labelledby="projets" class="container py-16">
         <div>
             <h2 class="text-4xl font-bold text-gray-800 max-w-2xl pb-20">Zoom sur les 
                 <span class="relative">

@@ -11,17 +11,32 @@
 </script>
 
 <script>
+  import SEOHead from '$lib/SEOHead.svelte'
   import Img from '$lib/UI/Img.svelte'
   import CTA from '$lib/CTA.svelte'
   export let photographies
 </script>
 
+<SEOHead
+	title="Photographies | Stéphanie Delon"
+	description="Développeuse web et graphiste située dans le Cap Sizun en Finistère, je suis également passionnée par la photographie | Stéphanie Delon"
+	image=""
+	alt="" />
 
-<section class="py-20">
+<section class="pt-20" aria-labelledby="photographies-du-cap-sizun">
   <div class="container px-4 mx-auto">
     <div class="mb-12 flex flex-wrap items-end justify-between">
       <div class="w-full md:w-auto mb-4 md:mb-0">
-        <h2 class="mt-2 text-4xl lg:text-5xl font-bold font-heading text-gray-800">Le Cap Sizun en photos</h2>
+        <h2 class="mt-2 text-4xl lg:text-5xl font-bold font-heading text-gray-800">Le Cap Sizun en 
+          <span class="relative">
+          photos
+          <div class="svg-shadow absolute -bottom-7 -right-8">
+            <svg width="176" height="78" viewBox="0 0 176 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.16866 49.7734C49.6249 56.8271 214.397 64.3995 159.471 26.2365" stroke="#F9F871" stroke-width="6" stroke-linecap="round"/>
+              </svg>
+          </div>
+        </span>
+      </h2>
         <p class="text-gray-600 max-w-md pt-4">La photographie est une de mes passions depuis de nombreuses années et comment ne pas être inspirée par la beauté époustouflante et sauvage du Cap Sizun !</p>
       </div>
     </div>

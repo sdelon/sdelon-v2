@@ -6,11 +6,11 @@
 
 <header class="relative bg-gray-bg">
     <div class="container">
-      <nav class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
+      <nav aria-label="navigation principale" class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
         <div class="flex justify-start lg:w-0 lg:flex-1 relative z-20">
           <a href="/">
             <span class="sr-only">Stéphanie Delon</span>
-            <img class="h-8 w-auto sm:h-10" src={logoSD} alt="">
+            <img class="h-8 w-auto sm:h-10" src={logoSD} alt="SDelon accueil">
           </a>
         </div>
         {#if openMenu === false}
@@ -62,7 +62,7 @@
                 </svg>
               </button>
           </div>
-          <nav class="mt-6">
+          <nav class="mt-6" aria-label="navigation pour mobile">
             <ul class="grid gap-y-8">
                 <li class="list-none">
                     <a sveltekit:prefetch href="/" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">

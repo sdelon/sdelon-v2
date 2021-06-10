@@ -1,3 +1,7 @@
+<script>
+  import SEOHead from '$lib/SEOHead.svelte'
+</script>
+
 <style>
     .bg-header {
         background-color: #ecefef;
@@ -5,29 +9,35 @@
     }
 </style>
 
+<SEOHead
+	title="Contact | Stéphanie Delon"
+	description="Trouvons ensemble une solution adaptée à vos besoins ! | Stéphanie Delon - développeuse web et graphiste"
+	image=""
+	alt="" />
+
 <section class="bg-header pb-8">
     <div class="container px-4 mx-auto">
       <div class="max-w-4xl mx-auto text-center pt-20 mb-24">
         <span class="text-gray-500 uppercase font-semibold tracking-wide">Accompagnement numérique</span>
-        <h2 class="mb-8 mt-2 text-5xl text-white font-black font-heading">Optez pour une visibilité numérique sur-mesure et performante</h2>
+        <h1 class="mb-8 mt-2 text-5xl text-white font-black font-heading">Optez pour une visibilité numérique sur-mesure et performante</h1>
       </div>
       <div class="flex flex-wrap justify-center">
         <div class="w-full sm:w-1/2 lg:w-1/3 flex px-4 mb-8">
           <div class="w-2/3 mb-4">
-            <h3 class="mb-2 text-2xl text-gray-800 font-bold font-heading">Identité numérique</h3>
+            <h2 class="mb-2 text-2xl text-gray-800 font-bold font-heading">Identité numérique</h2>
             <p class="text-lg text-gray-700 tracking-tight">Création ou refonte de votre site internet, je vous proposerai la solution la plus adaptée à vos besoins.</p>
           </div>
         </div>
         <div class="w-full sm:w-1/2 lg:w-1/3 flex px-4 mb-8">
           <div class="w-2/3 mb-4">
-            <h3 class="mb-2 text-2xl text-gray-800 font-bold font-heading">Flyers, brochures...</h3>
+            <h2 class="mb-2 text-2xl text-gray-800 font-bold font-heading">Flyers, brochures...</h2>
             <p class="text-lg text-gray-700 tracking-tight">En tant que graphiste, n'hésitez pas à me confier vos réalisations de flyers, cartes de visite et brochures !</p>
           </div>
         </div>
         <div class="w-full lg:w-1/3 flex px-4 mb-8">
           <div class="w-2/3 mb-4">
-            <h3 class="mb-2 text-2xl text-gray-800 font-bold font-heading">Autonomie</h3>
-            <p class="text-lg text-gray-700 tracking-tight">Une fois le site en ligne et après une formation, vous serez autonome pour la mise à jour de votre site.</p>
+            <h2 class="mb-2 text-2xl text-gray-800 font-bold font-heading">Autonomie</h2>
+            <p class="text-lg text-gray-700 tracking-tight">Après une formation gratuite et réalisée par mes soins, vous serez autonome pour la mise à jour de votre site.</p>
           </div>
         </div>
       </div>
@@ -52,15 +62,15 @@
           <form action="#">
             <label for="name">
                 Nom
-                <input class="w-full py-3 pl-3 mb-4 border rounded" type="text" >
+                <input class="w-full py-3 pl-3 mb-4 border rounded" type="text" required aria-required="true">
             </label>
             <label for="email">
                 Email
-                <input class="w-full py-3 pl-3 mb-4 border rounded" type="email">
+                <input class="w-full py-3 pl-3 mb-4 border rounded" type="email" required aria-required="true">
             </label>
             <label for="message">
                 Message
-                <textarea class="mb-4 w-full p-3 border rounded resize-none" id="1" name="message" cols="30" rows="10" placeholder="Votre message..."></textarea>
+                <textarea class="mb-4 w-full p-3 border rounded resize-none" id="1" name="message" cols="30" rows="10" placeholder="Votre message..." required aria-required="true"></textarea>
             </label>
             <button class="w-full inline-block px-6 py-3 mr-4 text-gray-bg font-bold leading-loose bg-bleu-dark rounded transition duration-200">Envoyer</button>
           </form>

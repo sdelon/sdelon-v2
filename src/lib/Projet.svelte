@@ -18,7 +18,7 @@
     </div>
     <div class="{isImgRight ? 'text-left place-self-start' : 'md:text-right place-self-end'} lg:w-1/2">
         <h3 class="font-black text-gray-800 text-4xl pb-1">{PrismicDom.RichText.asText(slice.titre_projet)}</h3>
-        <h4 class="uppercase text-gray-500 tracking-wide pb-6">{PrismicDom.RichText.asText(slice.categories_projet)}</h4>
+        <h4 class="uppercase text-gray-light tracking-wide pb-6">{PrismicDom.RichText.asText(slice.categories_projet)}</h4>
         <div class="text-gray-800">{@html PrismicDom.RichText.asText(slice.description_projet)}</div>
         <LinkSVG href='/' position="-bottom-5 {isImgRight ? 'md:left-0 md:-ml-5' : 'md:right-5'}" />
     </div>
