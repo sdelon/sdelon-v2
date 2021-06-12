@@ -1,16 +1,11 @@
 <script>
-    import { scrollTo } from 'svelte-scrolling'
+    import imgix, { placeholder } from 'svelte-imgix'
     import logoSD from '/static/assets/logo-sd-bleu.png'
+    import NavList from '$lib/UI/NavList.svelte'
     import CTALink from '$lib/UI/CTALink.svelte'
 
     let openMenu = false
 </script>
-
-<style>
-  .main-nav > li > a {
-    @apply text-base font-medium text-bleu-dark hover:text-bleu-lighter;
-  }
-</style>
 
 <header class="relative bg-gray-bg">
     <div class="container">
@@ -18,7 +13,7 @@
         <div class="flex justify-start lg:w-0 lg:flex-1 relative z-20">
           <a href="/">
             <span class="sr-only">Stéphanie Delon</span>
-            <img class="h-8 w-auto sm:h-10" src={logoSD} alt="SDelon accueil">
+            <img class="h-8 w-auto sm:h-10" use:imgix={logoSD} placeholder={logoSD} alt="SDelon accueil">
           </a>
         </div>
         {#if openMenu === false}
@@ -32,12 +27,7 @@
           </button>
         </div>
         {/if}
-        <ul class="hidden md:flex space-x-10 main-nav">
-            <li class="list-none"><a sveltekit:prefetch href="/">Accueil</a></li>
-            <li class="list-none"><a use:scrollTo={'services'} href="/#services">Services</a></li>
-            <li class="list-none"><a  use:scrollTo={'projets'} href="/#projets">Projets</a></li>
-            <li class="list-none"><a sveltekit:prefetch href="/photographies">Photographies</a></li>
-        </ul>
+        <NavList styles="hidden md:flex space-x-10 main-nav" />
         <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
           <CTALink isLink={true} link="contact" texte="contact" />
         </div>
@@ -61,52 +51,24 @@
               </button>
           </div>
           <nav class="mt-6" aria-label="navigation pour mobile">
-            <ul class="grid gap-y-8">
-                <li class="list-none">
-                    <a sveltekit:prefetch href="/" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
-                        <!-- Heroicon name: outline/chart-bar -->
-                        <svg class="flex-shrink-0 h-6 w-6 text-bleu-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                        </svg>
-                        <span class="ml-3 text-base font-medium text-gray-900">
-                          Accueil
-                        </span>
-                      </a>
-                </li>
-                <li class="list-none">
-                    <a use:scrollTo={'services'} href="/#services" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
-                        <!-- Heroicon name: outline/chart-bar -->
-                        <svg class="flex-shrink-0 h-6 w-6 text-bleu-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-                        </svg>
-                        <span class="ml-3 text-base font-medium text-gray-900">
-                          Services
-                        </span>
-                      </a>
-                </li>
-                <li class="list-none">
-                    <a use:scrollTo={'projets'} href="/#projets" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
-                        <!-- Heroicon name: outline/chart-bar -->
-                        <svg class="flex-shrink-0 h-6 w-6 text-bleu-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-                        </svg>
-                        <span class="ml-3 text-base font-medium text-gray-900">
-                          Projets
-                        </span>
-                      </a>
-                </li>
-                <li class="list-none">
-                    <a sveltekit:prefetch href="/photographies" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
-                        <!-- Heroicon name: outline/chart-bar -->
-                        <svg class="flex-shrink-0 h-6 w-6 text-bleu-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                        <span class="ml-3 text-base font-medium text-gray-900">
-                          Photographies
-                        </span>
-                      </a>
-                </li>
-            </ul>
+            <NavList 
+            styles="grid gap-y-8" 
+            isMobile 
+            item_styles="flex items-center gap-4"
+            link_styles="font-medium text-bleu-dark hover:text-bleu-lighter">
+              <svg slot="accueil" class="flex-shrink-0 h-6 w-6 text-bleu-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+              <svg slot="services" class="flex-shrink-0 h-6 w-6 text-bleu-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+              </svg>
+              <svg slot="projets" class="flex-shrink-0 h-6 w-6 text-bleu-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+              </svg>
+              <svg slot="photographies" class="flex-shrink-0 h-6 w-6 text-bleu-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </NavList>
         </nav>
         </div>
         <div class="py-6 px-5 space-y-6">

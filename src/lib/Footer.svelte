@@ -1,5 +1,5 @@
 <script>
-    import { scrollTo } from 'svelte-scrolling'
+    import NavList from '$lib/UI/NavList.svelte'
     import logoSD from '../../static/assets/logo-sd-bleu.png'
     import urlFb from '../../static/assets/icon-library.svg#icon-facebook'
     import urlTwitter from '../../static/assets/icon-library.svg#icon-twitter'
@@ -8,35 +8,16 @@
     $: year = new Date().getFullYear()
 </script>
 
-<style>
-    li > a {
-        @apply text-sm text-bleu-dark hover:text-bleu-lighter;
-    }
-</style>
-
 <footer class="bg-gray-bg py-20">
     <div class="container px-4 mx-auto text-center">
       <a class="inline-block mx-auto text-gray-600 text-2xl leading-none" href="/">
         <img class="h-12" src={logoSD} alt="SDelon accueil" width="auto">
       </a>
       <nav aria-label="navigation pied de page">
-          <ul class="my-6 flex flex-wrap gap-4 lg:gap-8 items-center justify-center">
-            <li class="mb-2 md:mb-0">
-                <a href="/">Accueil</a>
-            </li>
-            <li class="mb-2 md:mb-0">
-                <a use:scrollTo={'services'} href="/#services">Services</a>
-            </li>
-            <li class="mb-2 md:mb-0">
-                <a use:scrollTo={'projets'} href="/#projets">Projets</a>
-            </li>
-            <li sveltekit:prefetch class="mb-2 md:mb-0">
-                <a href="/photographies">Photographies</a>
-            </li>
-            <li sveltekit:prefetch class="mb-2 md:mb-0">
-                <a href="/contact">Contact</a>
-            </li>
-          </ul>
+          <NavList 
+          styles="my-6 flex flex-wrap gap-4 lg:gap-8 items-center justify-center"
+          item_styles="mb-2 md:mb-0"
+          link_styles="font-medium text-bleu-dark hover:text-bleu-lighter"/>
       </nav>
       <div aria-label="liens réseaux sociaux">
         <a class="inline-block mr-2 lg:mr-10" href="https://www.facebook.com/stephanie.delon" aria-label="Facebook de Stéphanie Delon">

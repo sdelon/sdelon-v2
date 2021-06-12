@@ -18,6 +18,7 @@
     import Img from '$lib/UI/Img.svelte'
     import Service from '$lib/Service.svelte'
     import Projet from '$lib/Projet.svelte'
+    import Projet2 from '$lib/Projet2.svelte'
     import Testimonials from '$lib/Testimonials.svelte'
     import CTA from '$lib/CTA.svelte'
 
@@ -106,9 +107,11 @@
             récemment mis en ligne
             </h2>
         </div>
-        <div class="flex flex-col gap-32 lg:gap-48">
+        <!--  <div class="flex flex-col gap-32 lg:gap-48">  -->
+        <div class="flex flex-col gap-12">
             {#each slice.items as slice, i}
-                <Projet {slice} isImgRight={i % 2 === 0 ? false : true }/>
+                <Projet2 {slice} isImgRight={i % 2 === 0 ? false : true } />
+                <!-- <Projet {slice} isImgRight={i % 2 === 0 ? false : true }/> -->
             {/each}
         </div>
 </section>
