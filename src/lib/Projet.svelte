@@ -3,6 +3,7 @@
     import PrismicDom from 'prismic-dom'
     import Img from '$lib/UI/Img.svelte'
     import Modal from '$lib/UI/Modal.svelte'
+    import LoadingSpinner from '$lib/UI/LoadingSpinner.svelte'
 
     export let slice, isImgRight = false
     let hovering = false, isModalClicked = false
@@ -18,9 +19,9 @@
             <p class="text-5xl font-black text-gray-800">{PrismicDom.RichText.asText(slice.titre_projet)}</p>
             <svg on:click={() => isModalClicked = !isModalClicked} class="w-10 h-10 cursor-pointer text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
         </div>
-        <div class="relative">
-            <div bind:this={loader} style="background-color:{slice.bg_color}" class="w-full h-96 absolute inset-0 z-20">
-                <p class="mx-auto">Charge la page</p>
+        <div class="relative w-full h-96">
+            <div bind:this={loader} style="background-color:{slice.bg_color}" class="absolute flex justify-center items-center inset-0 z-20">
+                <LoadingSpinner />
             </div>
             <iframe on:load={updateLoaded} src={slice.lien_projet.url} class="w-full h-96" title={PrismicDom.RichText.asText(slice.titre_projet)}></iframe>
         </div>
@@ -55,8 +56,8 @@
             <div>
                 <h3 class="font-black text-gray-800 text-6xl pb-1">{PrismicDom.RichText.asText(slice.titre_projet)}</h3>
                 <h4 class="uppercase text-gray-light tracking-wide pb-6">{PrismicDom.RichText.asText(slice.categories_projet)}</h4>
-                <div class="text-gray-800">{@html PrismicDom.RichText.asText(slice.description_projet)}</div>
-                <a class="uppercase font-black text-gray-light tracking-widest text-sm inline-block mt-10" href="/">Découvrir le projet en ligne</a>
+                <div class="text-gray-800">{@html PrismicDom.RichText.asHtml(slice.description_projet)}</div>
+                <a class="uppercase font-black text-gray-light tracking-widest text-sm inline-block mt-10" href="{slice.lien_projet.url}" target="blank">Découvrir le projet en ligne</a>
             </div>
         </div>
     </div>
