@@ -1,5 +1,4 @@
 <script>
-    import imgix, { placeholder } from 'svelte-imgix'
     import logoSD from '/static/assets/logo-sd-bleu.png'
     import NavList from '$lib/UI/NavList.svelte'
     import CTALink from '$lib/UI/CTALink.svelte'
@@ -13,7 +12,7 @@
         <div class="flex justify-start lg:w-0 lg:flex-1 relative z-20">
           <a href="/">
             <span class="sr-only">Stéphanie Delon</span>
-            <img class="h-8 w-auto sm:h-10" use:imgix={logoSD} placeholder={logoSD} alt="SDelon accueil">
+            <img class="h-8 w-auto sm:h-10" src={logoSD} alt="SDelon accueil">
           </a>
         </div>
         {#if openMenu === false}

@@ -1,6 +1,6 @@
 <script>
     import { page } from '$app/stores'
-    import { scrollTo } from 'svelte-scrolling'
+    //import { scrollTo } from 'svelte-scrolling'
 
     export let styles, item_styles = "", link_styles = "", isMobile = false
 </script>
@@ -20,7 +20,8 @@
     <li class="list-none {item_styles}">
         {#if $page.path === '/'}
         {#if isMobile}<slot name="services"></slot>{/if}
-        <a class="{link_styles}" use:scrollTo={'services'} href="/#services">Services</a>
+        <!-- <a class="{link_styles}" use:scrollTo={'services'} href="/#services">Services</a> -->
+        <a class="{link_styles}" href="/#services">Services</a>
         {:else}
         {#if isMobile}<slot name="services"></slot>{/if}
         <a class="{link_styles}" href="/#services">Services</a>
@@ -29,7 +30,8 @@
     <li class="list-none {item_styles}">
         {#if $page.path === '/'}
         {#if isMobile}<slot name="projets"></slot>{/if}
-        <a class="{link_styles}" use:scrollTo={'projets'} href="/#projets">Projets</a>
+        <!-- <a class="{link_styles}" use:scrollTo={'projets'} href="/#projets">Projets</a> -->
+        <a class="{link_styles}" href="/#projets">Projets</a>
         {:else}
         {#if isMobile}<slot name="projets"></slot>{/if}
         <a class="{link_styles}" href="/#projets">Projets</a>
