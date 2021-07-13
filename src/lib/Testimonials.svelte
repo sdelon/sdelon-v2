@@ -39,11 +39,11 @@
                     </defs>
                 </svg>
             </div>
-            <p class="pb-6">{@html PrismicDom.RichText.asHtml(slice.items[0].temoignage)}</p>
+            <div class="pb-6">{@html PrismicDom.RichText.asHtml(slice.items[0].temoignage)}</div>
             <p class="font-bold text-lg">{slice.items[0].nom}</p>
             <p class="text-gray-light">{slice.items[0].intitule}</p>
         </div>
-        <div class="bg-gray-bg p-8 col-start-1 col-span-2 lg:col-start-2 lg:col-span-1 rounded-lg shadow-lg relative">
+        <div class="bg-gray-bg p-8 col-start-1 col-span-2 md:col-start-1 md:col-span-2 xl:col-start-2 xl:col-span-1 rounded-lg shadow-lg relative">
             <div class="absolute -top-2 left-2">
                 <svg class="absolute top-5 left-5 md:left-0" width="20" height="16" viewBox="0 0 143 120" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="1" clip-path="url(#clip2)">
@@ -56,7 +56,7 @@
                     </defs>
                 </svg>
             </div>
-            <p class="pb-6">{@html PrismicDom.RichText.asHtml(slice.items[1].temoignage)}</p>
+            <div class="pb-6">{@html PrismicDom.RichText.asHtml(slice.items[1].temoignage)}</div>
             <p class="font-bold text-lg">{slice.items[1].nom}</p>
             <p class="text-gray-light">{slice.items[1].intitule}</p>
         </div>
@@ -73,7 +73,7 @@
                     </defs>
                 </svg>
             </div>
-            <p class="pb-6">{@html PrismicDom.RichText.asHtml(slice.items[2].temoignage)}</p>
+            <div class="pb-6">{@html PrismicDom.RichText.asHtml(slice.items[2].temoignage)}</div>
             <p class="font-bold text-lg">{slice.items[2].nom}</p>
             <p class="text-gray-light">{slice.items[2].intitule}</p>
         </div>

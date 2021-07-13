@@ -3,8 +3,6 @@
     import Img from '$lib/UI/Img.svelte'
     import CTALink from '$lib/UI/CTALink.svelte'
     export let slice
-
-    $: console.log(slice)
 </script>
 
 
