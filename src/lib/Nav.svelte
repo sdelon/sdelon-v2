@@ -6,10 +6,10 @@
     let openMenu = false
 </script>
 
-<header class="relative bg-gray-bg">
-    <div class="container">
+<header class="bg-gray-bg">
+    <div class="container relative z-20">
       <nav aria-label="navigation principale" class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
-        <div class="flex justify-start lg:w-0 lg:flex-1 relative z-20">
+        <div class="flex justify-start lg:w-0 lg:flex-1">
           <a href="/">
             <span class="sr-only">Stéphanie Delon</span>
             <img class="h-8 w-auto sm:h-10" src={logoSD} alt="SDelon accueil">
@@ -37,10 +37,16 @@
       Mobile menu
     -->
     {#if openMenu}
-    <div class="absolute bg-gray-bg top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-10">
+    <div class="absolute bg-gray-bg top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-30">
         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
         <div class="pt-5 pb-6 px-5">
-          <div class="w-full flex items-center justify-end">
+          <div class="w-full flex items-center justify-between">
+            <div class="flex justify-start lg:w-0 lg:flex-1">
+              <a href="/">
+                <span class="sr-only">Stéphanie Delon</span>
+                <img class="h-8 w-auto sm:h-10" src={logoSD} alt="SDelon accueil">
+              </a>
+            </div>
             <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                 <span class="sr-only">Close menu</span>
                 <!-- Heroicon name: outline/x -->

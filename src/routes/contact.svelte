@@ -1,3 +1,7 @@
+<script context="module">
+  export const prerender = true
+</script>
+
 <script>
   import SEOHead from '$lib/SEOHead.svelte'
 </script>
@@ -15,7 +19,7 @@
 	image=""
 	alt="" />
 
-<section class="bg-header pb-8">
+<section class="bg-header pb-8">    
     <div class="container px-4 mx-auto">
       <div class="max-w-4xl mx-auto text-center pt-20 mb-24">
         <span class="text-gray-500 uppercase font-semibold tracking-wide">Accompagnement numérique</span>
@@ -59,20 +63,21 @@
           </div>
         </div>
         <div class="w-full lg:w-1/2 px-4">
-          <form action="#">
+          <form name="contact" method="POST" data-netlify="true" action="/merci">
+            <input type="hidden" name="form-name" value="contact">
             <label for="name">
                 Nom
-                <input class="w-full py-3 pl-3 mb-4 border rounded" type="text" required aria-required="true">
+                <input class="w-full py-3 pl-3 mb-4 border rounded" type="text" name="nom" required aria-required="true">
             </label>
             <label for="email">
                 Email
-                <input class="w-full py-3 pl-3 mb-4 border rounded" type="email" required aria-required="true">
+                <input class="w-full py-3 pl-3 mb-4 border rounded" type="email" name="email" required aria-required="true">
             </label>
             <label for="message">
                 Message
                 <textarea class="mb-4 w-full p-3 border rounded resize-none" id="1" name="message" cols="30" rows="10" placeholder="Votre message..." required aria-required="true"></textarea>
             </label>
-            <button class="w-full inline-block px-6 py-3 mr-4 text-gray-bg font-bold leading-loose bg-bleu-dark rounded transition duration-200">Envoyer</button>
+            <button type="submit" class="w-full inline-block px-6 py-3 mr-4 text-gray-bg font-bold leading-loose bg-bleu-dark rounded transition duration-200">Envoyer</button>
           </form>
         </div>
       </div>

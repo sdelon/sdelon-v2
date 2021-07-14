@@ -11,7 +11,6 @@
 </script>
 
 <script>
-    import { scrollRef } from 'svelte-scrolling'
     import { extractMotUnderline } from '../utils/helpers'
     import SEOHead from '$lib/SEOHead.svelte'
     import Hero from '$lib/Hero.svelte'
@@ -22,6 +21,12 @@
 
     export let accueil
 </script>
+
+<style>
+    .projet-spacing {
+        @apply gap-32;
+    }
+</style>
 
 <SEOHead
 	title="Accueil | Stéphanie Delon"
@@ -34,7 +39,7 @@
 </section>
 {#each accueil.data.body as slice}
     {#if slice.slice_type === 'services'}
-<section use:scrollRef={'services'} id="services" aria-labelledby="services" class="container py-16">
+<section id="services" aria-labelledby="services" class="container py-16">
         <div>
             <h2 class="text-4xl font-bold text-gray-800 max-w-2xl pb-20">{extractMotUnderline(slice.primary.titre_section[0].text, slice.primary.mot_underline1)} <span class="relative">
                 {slice.primary.mot_underline1}
@@ -54,7 +59,7 @@
 </section>
     {/if}
     {#if slice.slice_type === 'projets'}
-<section use:scrollRef={'projets'}  id="projets" aria-labelledby="projets" class="container py-16">
+<section id="projets" aria-labelledby="projets" class="container py-16">
         <div>
             <h2 class="text-4xl font-bold text-gray-800 max-w-2xl pb-20">Zoom sur les 
                 <span class="relative">
@@ -68,7 +73,7 @@
             récemment mis en ligne
             </h2>
         </div>
-        <div class="flex flex-col gap-12">
+        <div class="flex flex-col projet-spacing">
             {#each slice.items as slice, i}
                 <Projet {slice} isImgRight={i % 2 === 0 ? false : true } />
             {/each}

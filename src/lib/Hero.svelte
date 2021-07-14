@@ -1,14 +1,16 @@
 <script>
     import { extractMotUnderline } from '../utils/helpers'
     import PrismicDom from 'prismic-dom'
-    import Img from '$lib/UI/Img.svelte'
     import CTALink from '$lib/UI/CTALink.svelte'
 
     export let accueil
 </script>
 
-<div class="flex flex-wrap items-center justify-center text-center -mx-2">
-    <div class="lg:w-2/3 px-2 lg:pr-10 mt-20 order-1 lg:order-none">
+<div class="relative flex flex-wrap items-center justify-center text-center -mx-2">
+    <div class="absolute -top-20 left-0 z-10 opacity-30">
+        <img src="assets/vector-hero.svg" alt="">
+    </div>
+    <div class="lg:w-2/3 px-2 lg:pr-10 mt-20 order-1 lg:order-none relative z-20">
       <p class="text-gray-light uppercase text-sm tracking-wide pb-3">{PrismicDom.RichText.asText(accueil.data.sous_titre)}</p>
       <div class="relative">
           <h1 class="text-3xl sm:text-5xl font-black text-gray-800 max-w-3xl mx-auto">{extractMotUnderline(accueil.data.titre_principal[0].text, accueil.data.mot_underline)} <span class="relative">
@@ -30,10 +32,5 @@
           spacing='my-12' />
       </div>
     </div>
-    <!-- <div class="lg:w-1/2 px-2">
-      <Img 
-      src={accueil.data.illustration_hero.url} 
-      alt={accueil.data.illustration_hero.alt} />
-    </div> -->
 </div>
 
