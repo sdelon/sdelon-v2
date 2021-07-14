@@ -1,7 +1,8 @@
 <script context="module">
   import Client from '../utils/client'
   import Prismic from '@prismicio/client'
-
+  export const prerender = true
+  
   export async function load() {
     const photographies = await Client.query(
         [Prismic.Predicates.at('document.type', 'photographies')]
