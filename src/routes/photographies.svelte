@@ -1,4 +1,5 @@
 <script context="module">
+  export const prerender = true
   export async function load({ fetch }) {
     const { photographies } = await fetch('/api/photographies').then(res => res.json())
 
