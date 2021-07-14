@@ -13,13 +13,13 @@
       <a class="inline-block mx-auto text-gray-600 text-2xl leading-none" href="/">
         <img class="h-12" src={logoSD} alt="SDelon accueil" width="auto">
       </a>
-      <nav aria-label="navigation pied de page">
+      <nav>
           <NavList 
           styles="my-6 flex flex-wrap gap-4 lg:gap-8 items-center justify-center"
           item_styles="mb-2 md:mb-0"
           link_styles="font-medium text-bleu-dark hover:text-bleu-lighter"/>
       </nav>
-      <div aria-label="liens réseaux sociaux">
+      <div>
         <a class="inline-block mr-2 lg:mr-10" href="https://www.facebook.com/stephanie.delon" aria-label="Facebook de Stéphanie Delon">
             <svg title="lien Facebook pour la page Chrysalide" class="text-bleu-dark hover:text-bleu-lighter cursor-pointer" fill="currentColor" role="img" width="18" height="18">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href={urlFb}></use>

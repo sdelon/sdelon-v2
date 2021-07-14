@@ -29,7 +29,7 @@
 	image=""
 	alt="" />
 
-<section class="pt-20" aria-labelledby="photographies-du-cap-sizun">
+<section class="pt-20">
   <div class="container px-4 mx-auto">
     <div class="mb-12 flex flex-wrap items-end justify-between">
       <div class="w-full md:w-auto mb-4 md:mb-0">

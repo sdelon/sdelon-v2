@@ -2,6 +2,6 @@
     export let titre_projet, styles
 </script>
 
-<section class="{styles}" aria-label="description du projet {titre_projet}">
+<section class="{styles}">
     <slot></slot>
 </section>

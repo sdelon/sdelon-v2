@@ -12,7 +12,7 @@
         <div class="flex justify-start lg:w-0 lg:flex-1">
           <a href="/">
             <span class="sr-only">Stéphanie Delon</span>
-            <img class="h-8 w-auto sm:h-10" src={logoSD} alt="SDelon accueil">
+            <img width="40" height="40" class="h-8 w-auto sm:h-10" src={logoSD} alt="SDelon accueil">
           </a>
         </div>
         {#if openMenu === false}
@@ -44,7 +44,7 @@
             <div class="flex justify-start lg:w-0 lg:flex-1">
               <a href="/">
                 <span class="sr-only">Stéphanie Delon</span>
-                <img class="h-8 w-auto sm:h-10" src={logoSD} alt="SDelon accueil">
+                <img width="40" height="40" class="h-8 w-auto sm:h-10" src={logoSD} alt="SDelon accueil">
               </a>
             </div>
             <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">

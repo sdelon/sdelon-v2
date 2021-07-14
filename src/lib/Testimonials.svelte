@@ -10,7 +10,7 @@
     }
 </style>
 
-<section aria-labelledby="temoignages" class="bg-testimonials my-16">
+<section class="bg-testimonials my-16">
     <div class="container py-28 relative grid grid-cols-1 md:grid-cols-4 gap-8">
         <svg class="absolute top-5 left-5 md:left-0" width="143" height="120" viewBox="0 0 143 120" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g opacity="0.8" clip-path="url(#clip0)">

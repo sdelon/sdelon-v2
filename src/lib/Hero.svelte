@@ -8,7 +8,7 @@
 
 <div class="relative flex flex-wrap items-center justify-center text-center -mx-2">
     <div class="absolute -top-20 left-0 z-10 opacity-30">
-        <img src="assets/vector-hero.svg" alt="">
+        <img width="685" height="627" src="assets/vector-hero.svg" alt="illu" aria-hidden="true">
     </div>
     <div class="lg:w-2/3 px-2 lg:pr-10 mt-20 order-1 lg:order-none relative z-20">
       <p class="text-gray-light uppercase text-sm tracking-wide pb-3">{PrismicDom.RichText.asText(accueil.data.sous_titre)}</p>
