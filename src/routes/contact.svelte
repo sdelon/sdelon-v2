@@ -48,12 +48,12 @@
     </div>
 </section>
 
-<section class="py-20">
+<section id="formulaire" class="py-20">
     <div class="container px-4 mx-auto">
       <div class="flex flex-wrap -mx-4">
         <div class="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
           <div class="max-w-lg">
-            <h2 class="text-5xl font-black text-gray-800 max-w-2xl mx-auto">Trouvons ensemble une solution adaptée à vos besoins !</h2>
+            <h2 class="text-5xl font-black text-gray-800 max-w-2xl mx-auto">Trouvons ensemble une solution adaptée à vos attentes !</h2>
             <div class="pt-8 text-gray-600 leading-loose">
               <h3 class="text-lg font-bold">Stéphanie Delon</h3>
               <p class="font-semibold">Développeuse web & graphiste</p>

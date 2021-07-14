@@ -27,7 +27,7 @@
         <p class="text-gray-600 uppercase tracking-wide text-sm font-semibold pb-8">{PrismicDom.RichText.asText(slice.primary.sous_titre1)}</p>
         <h2 class="text-4xl md:pl-8 md:border-l-8 md:border-bleu-dark font-black font-heading">{PrismicDom.RichText.asText(slice.primary.titre_section)}</h2>
         <div class="mt-6 mb-8 text-gray-light leading-relaxed">{@html PrismicDom.RichText.asHtml(slice.primary.description)}</div>
-        <CTALink isLink={true} link="contact" texte={slice.primary.texte_lien_cta1} spacing="my-2" />
+        <CTALink isLink={true} link="contact/#formulaire" texte={slice.primary.texte_lien_cta1} spacing="my-2" />
       </div>
     </div>
   </section>

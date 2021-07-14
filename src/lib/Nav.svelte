@@ -78,7 +78,7 @@
         </div>
         <div class="py-6 px-5 space-y-6">
           <div>
-            <CTALink isLink={true} link="contact" texte="contact" />
+            <CTALink isLink={true} link="contact/#formulaire" texte="contact" />
           </div>
         </div>
         </div>
