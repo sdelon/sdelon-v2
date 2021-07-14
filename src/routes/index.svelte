@@ -45,7 +45,7 @@
 </section>
 {#each accueil.data.body as slice}
     {#if slice.slice_type === 'services'}
-<section id="services" aria-labelledby="services" class="container py-16">
+<section id="services" class="container py-16">
         <div>
             <h2 class="text-4xl font-bold text-gray-800 max-w-2xl pb-20">{extractMotUnderline(slice.primary.titre_section[0].text, slice.primary.mot_underline1)} <span class="relative">
                 {slice.primary.mot_underline1}
@@ -65,7 +65,7 @@
 </section>
     {/if}
     {#if slice.slice_type === 'projets'}
-<section id="projets" aria-labelledby="projets" class="container py-16">
+<section id="projets" class="container py-16">
         <div>
             <h2 class="text-4xl font-bold text-gray-800 max-w-2xl pb-20">Zoom sur les 
                 <span class="relative">

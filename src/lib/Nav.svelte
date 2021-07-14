@@ -8,7 +8,7 @@
 
 <header class="bg-gray-bg">
     <div class="container relative z-20">
-      <nav aria-label="navigation principale" class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
+      <nav class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
         <div class="flex justify-start lg:w-0 lg:flex-1">
           <a href="/">
             <span class="sr-only">Stéphanie Delon</span>
