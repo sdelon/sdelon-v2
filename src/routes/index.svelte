@@ -37,8 +37,8 @@
 <SEOHead
 	title="Accueil | Stéphanie Delon"
 	description="Développeuse web et graphiste située dans le Cap Sizun en Finistère, découvrez ici les services que je vous propose ainsi que mes plus récents projets | Stéphanie Delon"
-	image=""
-	alt="" />
+	image="https://images.prismic.io/sdelon-portfolio/377a7464-253f-4861-85ee-eb1138a9b982_stephanie-delon.jpg?auto=compress,format"
+	alt="Développeuse web dans le Cap Sizun" />
 
 <section class="container pb-8">
     <Hero {accueil} />
