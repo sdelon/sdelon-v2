@@ -1,11 +1,15 @@
 <script context="module">
-  // export const prerender = true
-  export async function load({ fetch }) {
-    const { photographies } = await fetch('/api/photographies').then(res => res.json())
+  import Client from '../utils/client'
+  import Prismic from '@prismicio/client'
+
+  export async function load() {
+    const photographies = await Client.query(
+        [Prismic.Predicates.at('document.type', 'photographies')]
+    )
 
     return {
       props: {
-        photographies: photographies[0]
+        photographies: photographies.results[0]
       }
     }
   }

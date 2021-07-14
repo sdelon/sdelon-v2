@@ -1,11 +1,15 @@
 <script context="module">
-    export const prerender = true
-    export async function load({ fetch }) {
-        const { accueil } = await fetch('/api').then(res => res.json())
-        
+    import Client from '../utils/client'
+    import Prismic from '@prismicio/client'
+
+    export async function load() {
+        const accueil = await Client.query(
+            [Prismic.Predicates.at('document.type', 'accueil')]
+        )
+
         return {
             props: {
-                accueil: accueil[0]
+                accueil: accueil.results[0]
             }
         }
     }

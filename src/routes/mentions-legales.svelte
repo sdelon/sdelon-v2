@@ -1,5 +1,4 @@
 <script context="module">
-    export const prerender = true
     export async function load({ fetch }) {
         const { accueil } = await fetch('/api').then(res => res.json())
         let cta = accueil[0].data.body.filter(slice => slice.slice_type === "cta")
