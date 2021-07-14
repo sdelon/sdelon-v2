@@ -1,27 +1,27 @@
 <script>
     import { page } from '$app/stores'
-    import { gsap } from 'gsap'
-    import { ScrollToPlugin } from '../../../node_modules/gsap/dist/ScrollToPlugin'
+    // import { gsap } from 'gsap'
+    // import { ScrollToPlugin } from '../../../node_modules/gsap/dist/ScrollToPlugin'
 
     export let styles, item_styles = "", link_styles = "", isMobile = false
 
-    gsap.registerPlugin(ScrollToPlugin)
+    // gsap.registerPlugin(ScrollToPlugin)
 
-    const scrollToAnchor = (node, params) => {
+    // const scrollToAnchor = (node, params) => {
 
-    function goToAnchor(e) {
-        if(e) e.preventDefault()
-            gsap.to(window, { duration: 1, scrollTo: `#${params}`})
-        }
+    // function goToAnchor(e) {
+    //     if(e) e.preventDefault()
+    //         gsap.to(window, { duration: 1, scrollTo: `#${params}`})
+    //     }
 
-        node.addEventListener('click', goToAnchor)
+    //     node.addEventListener('click', goToAnchor)
 
-        return {
-            onDestroy() {
-                node.removeEventListener('click', goToAnchor)
-            }
-        }
-    }
+    //     return {
+    //         onDestroy() {
+    //             node.removeEventListener('click', goToAnchor)
+    //         }
+    //     }
+    // }
 </script>
 
 <style>
@@ -39,7 +39,8 @@
     <li class="list-none {item_styles}">
         {#if $page.path === '/'}
         {#if isMobile}<slot name="services"></slot>{/if}
-        <a use:scrollToAnchor={'services'} class="{link_styles}" href="/#services">Services</a>
+        <!-- <a use:scrollToAnchor={'services'} class="{link_styles}" href="/#services">Services</a> -->
+        <a class="{link_styles}" href="/#services">Services</a>
         {:else}
         {#if isMobile}<slot name="services"></slot>{/if}
         <a class="{link_styles}" href="/#services">Services</a>
@@ -48,7 +49,8 @@
     <li class="list-none {item_styles}">
         {#if $page.path === '/'}
         {#if isMobile}<slot name="projets"></slot>{/if}
-        <a use:scrollToAnchor={'projets'} class="{link_styles}" href="/#projets">Projets</a>
+        <!-- <a use:scrollToAnchor={'projets'} class="{link_styles}" href="/#projets">Projets</a> -->
+        <a class="{link_styles}" href="/#projets">Projets</a>
         {:else}
         {#if isMobile}<slot name="projets"></slot>{/if}
         <a class="{link_styles}" href="/#projets">Projets</a>
