@@ -1,7 +1,7 @@
 <script>
     import { page } from '$app/stores'
-    import { gsap } from "gsap"
-    import ScrollToPlugin from "gsap/dist/ScrollToPlugin"
+    import { gsap } from 'gsap'
+    import { ScrollToPlugin } from '../../../node_modules/gsap/dist/ScrollToPlugin'
 
     export let styles, item_styles = "", link_styles = "", isMobile = false
 
@@ -11,7 +11,7 @@
 
     function goToAnchor(e) {
         if(e) e.preventDefault()
-            gsap.to(window, { duration: 2, scrollTo: `#${params}`})
+            gsap.to(window, { duration: 1, scrollTo: `#${params}`})
         }
 
         node.addEventListener('click', goToAnchor)
