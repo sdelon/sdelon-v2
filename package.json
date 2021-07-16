@@ -7,12 +7,12 @@
     "preview": "svelte-kit preview"
   },
   "devDependencies": {
-    "@sveltejs/adapter-netlify": "^1.0.0-next.22",
-    "@sveltejs/kit": "^1.0.0-next.129",
+    "@sveltejs/adapter-netlify": "^1.0.0-next.23",
+    "@sveltejs/kit": "^1.0.0-next.131",
     "autoprefixer": "^10.3.1",
     "cssnano": "^5.0.6",
     "encoding": "^0.1.13",
-    "gsap": "^3.7.0",
+    "gsap": "^3.7.1",
     "postcss": "^8.3.5",
     "postcss-load-config": "^3.1.0",
     "svelte": "^3.38.3",
