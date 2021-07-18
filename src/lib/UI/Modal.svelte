@@ -1,5 +1,5 @@
 <script>
-    export let titre_projet, styles
+    export let styles
 </script>
 
 <section class="{styles}">
