@@ -11,7 +11,7 @@
 <footer class="bg-gray-bg py-20">
     <div class="container px-4 mx-auto text-center">
       <a class="inline-block mx-auto text-gray-600 text-2xl leading-none" href="/">
-        <img class="h-12" src={logoSD} alt="SDelon accueil" width="auto">
+        <img  width="40" height="40" class="h-12 w-12" src={logoSD} alt="SDelon accueil">
       </a>
       <nav>
           <NavList 
