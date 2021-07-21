@@ -14,7 +14,8 @@ const config = {
 		target: '#svelte',
 		vite: {
 			optimizeDeps: {
-				exclude:['@beyonk/gdpr-cookie-consent-banner']
+		// 		exclude:['gsap/ScrollTrigger']
+				exclude: ['@beyonk/gdpr-cookie-consent-banner']
 			}
 		}
 	}

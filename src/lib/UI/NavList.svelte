@@ -37,7 +37,6 @@
         {#if $page.path === '/'}
         {#if isMobile}<slot name="services"></slot>{/if}
         <a use:scrollToAnchor={'services'} class="{link_styles}" href="/#services">Services</a>
-        <!-- <a class="{link_styles}" href="/#services">Services</a> -->
         {:else}
         {#if isMobile}<slot name="services"></slot>{/if}
         <a class="{link_styles}" href="/#services">Services</a>
@@ -47,7 +46,6 @@
         {#if $page.path === '/'}
         {#if isMobile}<slot name="projets"></slot>{/if}
         <a use:scrollToAnchor={'projets'} class="{link_styles}" href="/#projets">Projets</a>
-        <!-- <a class="{link_styles}" href="/#projets">Projets</a> -->
         {:else}
         {#if isMobile}<slot name="projets"></slot>{/if}
         <a class="{link_styles}" href="/#projets">Projets</a>

@@ -9,7 +9,6 @@
     <title>{title}</title>
     <meta name="description" content={description}>
     <meta name="robots" content="index,follow">
-
     <link rel="canonical" href={url}>
 
     <!-- Facebook Open Graph -->
