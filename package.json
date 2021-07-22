@@ -8,16 +8,16 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-netlify": "^1.0.0-next.25",
-    "@sveltejs/kit": "^1.0.0-next.132",
+    "@sveltejs/kit": "^1.0.0-next.134",
     "autoprefixer": "^10.3.1",
-    "cssnano": "^5.0.6",
+    "cssnano": "^5.0.7",
     "encoding": "^0.1.13",
     "gsap": "^3.7.1",
-    "postcss": "^8.3.5",
+    "postcss": "^8.3.6",
     "postcss-load-config": "^3.1.0",
-    "svelte": "^3.38.3",
+    "svelte": "^3.40.0",
     "svelte-preprocess": "^4.7.4",
-    "tailwindcss": "^2.2.4"
+    "tailwindcss": "^2.2.6"
   },
   "type": "module",
   "dependencies": {

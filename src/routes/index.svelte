@@ -49,7 +49,7 @@
         <div>
             <h2 class="text-4xl font-bold text-gray-800 max-w-2xl pb-20">{extractMotUnderline(slice.primary.titre_section[0].text, slice.primary.mot_underline1)} <span class="relative">
                 {slice.primary.mot_underline1}
-                <div class="absolute -bottom-5 right-0 -mr-10">
+                <div class="absolute -bottom-5 right-0 -mr-5">
                     <svg class="svg-shadow" width="126" height="21" viewBox="0 0 126 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3.5 17.5C25.3333 10.1666 79.7 -2.30002 122.5 6.49998" stroke="#F9F871" stroke-width="6" stroke-linecap="round"/>
                     </svg>                  
@@ -70,8 +70,8 @@
             <h2 class="text-4xl font-bold text-gray-800 max-w-2xl pb-20">Zoom sur les 
                 <span class="relative">
                     projets
-                    <div class="hidden sm:block absolute -bottom-5 right-0">
-                        <svg class="svg-shadow" width="176" height="28" viewBox="0 0 176 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="hidden sm:block absolute -bottom-3 right-0">
+                        <svg class="svg-shadow" width="130" height="28" viewBox="0 0 130 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3.5 24.5C61.3333 25.5 176.1 22.6 172.5 3" stroke="#F9F871" stroke-width="6" stroke-linecap="round"/>
                         </svg>                 
                     </div>

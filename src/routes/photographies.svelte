@@ -53,6 +53,7 @@
         <div class="rounded-lg lg:col-span-3 row-span-2">
           <Img
           src={slice.items[0].image.url}
+          mq_sizes="(min-width: 760px) 25vw, 100vw"
           alt={slice.items[0].image.alt}
           width={slice.items[0].image.dimensions.width}
           height={slice.items[0].image.dimensions.height}
@@ -61,54 +62,63 @@
         </div>
         <Img
           src={slice.items[1].image.url}
+          mq_sizes="(min-width: 760px) 25vw, 100vw"
           alt={slice.items[1].image.alt}
           width={slice.items[1].image.dimensions.width}
           height={slice.items[1].image.dimensions.height}
           styles="w-full h-full object-cover rounded-lg" />
         <Img
           src={slice.items[2].image.url}
+          mq_sizes="(min-width: 760px) 25vw, 100vw"
           alt={slice.items[2].image.alt}
           width={slice.items[2].image.dimensions.width}
           height={slice.items[2].image.dimensions.height}
           styles="w-full h-full object-cover rounded-lg" />
         <Img
           src={slice.items[3].image.url}
+          mq_sizes="(min-width: 760px) 25vw, 100vw"
           alt={slice.items[3].image.alt}
           width={slice.items[3].image.dimensions.width}
           height={slice.items[3].image.dimensions.height}
           styles="w-full h-full object-cover rounded-lg" />
         <Img
           src={slice.items[4].image.url}
+          mq_sizes="(min-width: 760px) 25vw, 100vw"
           alt={slice.items[4].image.alt}
           width={slice.items[4].image.dimensions.width}
           height={slice.items[4].image.dimensions.height}
           styles="w-full h-full object-cover rounded-lg" />
         <Img
           src={slice.items[5].image.url}
+          mq_sizes="(min-width: 760px) 25vw, 100vw"
           alt={slice.items[5].image.alt}
           width={slice.items[5].image.dimensions.width}
           height={slice.items[5].image.dimensions.height}
           styles="w-full h-full object-cover rounded-lg" />
         <Img
           src={slice.items[6].image.url}
+          mq_sizes="(min-width: 760px) 25vw, 100vw"
           alt={slice.items[6].image.alt}
           width={slice.items[6].image.dimensions.width}
           height={slice.items[6].image.dimensions.height}
           styles="w-full h-full object-cover rounded-lg" />
         <Img
           src={slice.items[7].image.url}
+          mq_sizes="(min-width: 760px) 25vw, 100vw"
           alt={slice.items[7].image.alt}
           width={slice.items[7].image.dimensions.width}
           height={slice.items[7].image.dimensions.height}
           styles="w-full h-full object-cover rounded-lg" />
         <Img
           src={slice.items[8].image.url}
+          mq_sizes="(min-width: 760px) 25vw, 100vw"
           alt={slice.items[8].image.alt}
           width={slice.items[8].image.dimensions.width}
           height={slice.items[8].image.dimensions.height}
           styles="w-full h-full object-cover rounded-lg" />
         <Img
           src={slice.items[9].image.url}
+          mq_sizes="(min-width: 760px) 25vw, 100vw"
           alt={slice.items[9].image.alt}
           width={slice.items[9].image.dimensions.width}
           height={slice.items[9].image.dimensions.height}
@@ -116,6 +126,7 @@
         <div class="md:row-span-2">
           <Img
           src={slice.items[10].image.url}
+          mq_sizes="(min-width: 760px) 25vw, 100vw"
           alt={slice.items[10].image.alt}
           width={slice.items[10].image.dimensions.width}
           height={slice.items[10].image.dimensions.height}
@@ -125,6 +136,7 @@
         <div class="md:col-span-2">
           <Img
           src={slice.items[11].image.url}
+          mq_sizes="(min-width: 760px) 25vw, 100vw"
           alt={slice.items[11].image.alt}
           width={slice.items[11].image.dimensions.width}
           height={slice.items[11].image.dimensions.height}
@@ -134,6 +146,7 @@
         <div class="md:col-span-2">
           <Img
           src={slice.items[12].image.url}
+          mq_sizes="(min-width: 760px) 25vw, 100vw"
           alt={slice.items[12].image.alt}
           width={slice.items[12].image.dimensions.width}
           height={slice.items[12].image.dimensions.height}
@@ -142,6 +155,7 @@
         </div>
         <Img
           src={slice.items[13].image.url}
+          mq_sizes="(min-width: 760px) 25vw, 100vw"
           alt={slice.items[13].image.alt}
           width={slice.items[13].image.dimensions.width}
           height={slice.items[13].image.dimensions.height}
@@ -149,6 +163,7 @@
         <div class="md:col-span-3 lg:col-span-2">
           <Img
           src={slice.items[14].image.url}
+          mq_sizes="(min-width: 760px) 25vw, 100vw"
           alt={slice.items[14].image.alt}
           width={slice.items[14].image.dimensions.width}
           height={slice.items[14].image.dimensions.height}

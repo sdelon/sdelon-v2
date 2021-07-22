@@ -33,10 +33,12 @@
     <div class="{isImgRight ? 'md:order-last' : 'order-first'}">
         <Img 
         src={slice.image.url}
+        mq_sizes="(min-width: 760px) 50vw, 100vw"
         alt={slice.image.alt}
         width={slice.image.dimensions.width}
         height={slice.image.dimensions.height}
-        styles="w-full h-full object-cover"/>
+        container_styles="w-full h-full"
+        styles="h-full object-cover"/>
     </div>
     <div class="bg-gray-200 p-5 sm:p-20 relative">
         <button

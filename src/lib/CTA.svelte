@@ -5,18 +5,13 @@
     export let slice
 </script>
 
-<style>
-  .img-container {
-    @apply flex-grow w-auto h-auto;
-  }
-</style>
-
 <section class="py-8 px-4">
   <div class="flex flex-wrap items-center max-w-7xl mx-auto">
     <div class="md:w-1/2 px-4 mb-8 md:mb-0">
-        <div class="img-container">
+        <div class="flex-grow w-auto h-auto">
             <Img
               src={slice.primary.image.url}
+              mq_sizes="(min-width: 760px) 50vw, 100vw"
               alt="Je suis sur une plage à quelques kilomètres de mon domicile"
               width={slice.primary.image.dimensions.width}
               height={slice.primary.image.dimensions.height}

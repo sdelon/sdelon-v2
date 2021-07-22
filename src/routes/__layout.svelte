@@ -5,9 +5,9 @@
 
 </script>
 
-<svelte:head>
+<!-- <svelte:head>
   <script async src="https://cdn.volument.com/v1/volument.js" onload="volument('74eeb974fd')"></script>
-</svelte:head>
+</svelte:head> -->
 
 <Nav />
 <main class="bg-gray-bg min-h-screen">
