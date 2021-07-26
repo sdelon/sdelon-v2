@@ -5,10 +5,10 @@ export async function handle({ request, resolve }) {
         ...response,
         headers: {
             ...response.headers,
-            'strict-transport-security': 'max-age=31536000',
-            'x-content-type-options': 'nosniff',
-            'x-frame-options': 'DENY',
-            'x-xss-protection': '1; mode=block'
+            'Strict-Transport-Security': 'max-age=31536000',
+            'X-Content-Type-Options': 'nosniff',
+            'X-Frame-Options': 'DENY',
+            'X-XSS-Protection': '1; mode=block'
         }
     }
 }
