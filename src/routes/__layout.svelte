@@ -4,9 +4,16 @@
   import Footer from '$lib/Footer.svelte'
 </script>
 
-<!-- <svelte:head>
-  <script async src="https://cdn.volument.com/v1/volument.js" onload="volument('74eeb974fd')"></script>
-</svelte:head> -->
+<svelte:head>
+  <script src="https://cdn.jsdelivr.net/gh/manucaralmo/GlowCookies@3.1.3/src/glowCookies.min.js"></script>
+  <script>
+      glowCookies.start('fr', { 
+          style: 1,
+          analytics: 'G-TMX3F24LXV', 
+          policyLink: 'https://policies.google.com/technologies/cookies?hl=fr-FR'
+      });
+  </script>
+</svelte:head>
 
 <Nav />
 <main class="bg-gray-bg min-h-screen">
