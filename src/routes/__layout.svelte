@@ -10,7 +10,10 @@
       glowCookies.start('fr', { 
           style: 1,
           analytics: 'G-TMX3F24LXV', 
-          policyLink: 'https://policies.google.com/technologies/cookies?hl=fr-FR'
+          policyLink: 'https://policies.google.com/technologies/cookies?hl=fr-FR',
+          hideAfterClick: true,
+          acceptBtnBackground: '#0C3E3B',
+          rejectBtnBackground: '#F3F3F3'
       });
   </script>
 </svelte:head>
