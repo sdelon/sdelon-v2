@@ -41,6 +41,6 @@
         alt={alt} 
         class="{styles}">
     {:else}
-        <img src={placeholder(src)} {width} {height} alt={alt} class="{styles}">
+        <img src={placeholder(src)} loading="lazy" {width} {height} alt={alt} class="{styles}">
     {/if}
 </div>
