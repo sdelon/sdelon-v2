@@ -10,15 +10,6 @@
 	}
 	let color_primary = "#0D3E3A"
 	let color_secondary = "#F6F7F9"
-
-  function analytics() {
-    alert('analytics is now working')
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'G-TMX3F24LXV');
-  }
 </script>
 
 <Nav />
