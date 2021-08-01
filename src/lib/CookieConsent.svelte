@@ -21,7 +21,7 @@
   
     export let categories = {
       analytics: function () {
-        console.log('analytics on')
+        // console.log('analytics on')
       },
       tracking: function () {},
       marketing: function () {},
