@@ -22,10 +22,6 @@
     export let categories = {
       analytics: function () {
         console.log('analytics on')
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-TMX3F24LXV');
       },
       tracking: function () {},
       marketing: function () {},
@@ -61,7 +57,6 @@
     $: choicesMerged = Object.assign({}, choicesDefaults, choices)
   
     $: choicesArr = Object.values(choicesMerged).map((item, index) => {
-      // console.log(item)
       return Object.assign(
         {},
         item,
