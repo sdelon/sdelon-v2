@@ -22,6 +22,7 @@
   "type": "module",
   "dependencies": {
     "@prismicio/client": "^5.1.0",
+    "cookie-universal": "^2.1.5",
     "prismic-dom": "^2.2.6",
     "svelte-inview": "^2.0.1"
   }
