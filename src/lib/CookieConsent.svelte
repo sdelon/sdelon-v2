@@ -20,9 +20,7 @@
       'We use cookies to offer a better browsing experience, analyze site traffic, personalize content, and serve targeted advertisements. Please review our privacy policy & cookies information page. By clicking accept, you consent to our privacy policy & use of cookies.'
   
     export let categories = {
-      analytics: function () {
-        // console.log('analytics on')
-      },
+      analytics: function () {},
       tracking: function () {},
       marketing: function () {},
       necessary: function () {}
