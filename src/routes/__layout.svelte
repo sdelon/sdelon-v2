@@ -12,6 +12,10 @@
 	let color_secondary = "#F6F7F9"
 </script>
 
+<svelte:head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TMX3F24LXV"></script>
+</svelte:head>
+
 <Nav />
 <main class="bg-gray-bg min-h-screen">
     <slot />
