@@ -125,7 +125,7 @@
       return validate(cookieChoices, cookie)
     }
   
-    function execute (chosen) {
+    function execute(chosen) {
       const types = Object.keys(cookieChoices)
   
       types.forEach(t => {
@@ -225,6 +225,7 @@
   .cookieConsent__Right {
     display: flex;
     align-items: flex-end;
+    flex-wrap: wrap;
   }
   
   .cookieConsentOperations {
