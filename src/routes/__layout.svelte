@@ -14,20 +14,22 @@
 
   function initAnalytics() {
     is_analytics = !is_analytics
+
+    if(is_analytics) {
+      window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'analytics_storage': is_analytics ? 'granted' : 'denied'
+        });
+        gtag('js', new Date());
+        gtag('config', 'G-TMX3F24LXV');
+    }
   }
 </script>
 
 <svelte:head>
-  {#if is_analytics}
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TMX3F24LXV"></script>
-  <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-  
-      gtag('config', 'G-TMX3F24LXV');
-  </script>
-  {/if}
 </svelte:head>
 
 <Nav />

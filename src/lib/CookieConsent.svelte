@@ -90,7 +90,7 @@
       }
     })
   
-    function setCookie (choices) {
+    function setCookie(choices) {
       const expires = new Date()
       expires.setDate(expires.getDate() + 30)
   
@@ -98,7 +98,7 @@
       cookies.set(cookieName, { choices }, options)
     }
   
-    function removeCookie () {
+    function removeCookie() {
       const { path } = cookieConfig
       cookies.remove(cookieName, Object.assign({}, path ? { path } : {}))
     }
@@ -134,6 +134,12 @@
     }
   
     function choose () {
+      const analytics = Object.entries(cookieChoices)
+      .map(choice => choice.filter(c => c && c !== "necessary").length > 1)
+      .filter(Boolean)
+
+      if(!analytics.length) removeCookie()
+
       setCookie(cookieChoices)
       execute(cookieChoices)
     }
