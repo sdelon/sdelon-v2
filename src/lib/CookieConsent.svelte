@@ -11,10 +11,11 @@
   
     export let cookieName = null
     export let showEditIcon = true
-  
+
     let shown = false
     let settingsShown = false
-  
+    let GA_cookies
+
     export let heading = 'Cookies'
     export let description =
       'We use cookies to offer a better browsing experience, analyze site traffic, personalize content, and serve targeted advertisements. Please review our privacy policy & cookies information page. By clicking accept, you consent to our privacy policy & use of cookies.'
@@ -103,8 +104,15 @@
       cookies.remove(cookieName, Object.assign({}, path ? { path } : {}))
     }
 
+    function removeGACookies() {
+      GA_cookies = Object.keys(cookies.getAll())
+        .filter(cookie => cookie.includes('_ga'))
+        .forEach(c => cookies.remove(c))
+    }
+
     function denyBtn() {
       removeCookie()
+      removeGACookies()
       Object.entries(choicesDefaults).map(choice => {
         if(choice[0] !== 'necessary') {
           return choice[1].value = false
@@ -138,7 +146,7 @@
       .map(choice => choice.filter(c => c && c !== "necessary").length > 1)
       .filter(Boolean)
 
-      if(!analytics.length) removeCookie()
+      if(!analytics.length) removeGACookies()
 
       setCookie(cookieChoices)
       execute(cookieChoices)
