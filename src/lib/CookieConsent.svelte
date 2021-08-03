@@ -98,27 +98,31 @@
       const options = Object.assign({}, cookieConfig, { expires })
       cookies.set(cookieName, { choices }, options)
     }
+
+    console.log(Object.keys(cookies.getAll()))
   
     function removeCookie() {
       const { path } = cookieConfig
       cookies.remove(cookieName, Object.assign({}, path ? { path } : {}))
     }
 
-    function removeGACookies() {
-      GA_cookies = Object.keys(cookies.getAll())
-        .filter(cookie => cookie.includes('_ga'))
-        .forEach(c => cookies.remove(c))
-    }
+    // function removeGACookies() {
+    //   GA_cookies = Object.keys(cookies.getAll())
+    //     .filter(cookie => cookie.includes('_ga'))
+    //     .forEach(c => cookies.remove(c))
+    // }
 
     function denyBtn() {
-      removeCookie()
-      removeGACookies()
-      Object.entries(choicesDefaults).map(choice => {
-        if(choice[0] !== 'necessary') {
-          return choice[1].value = false
-        }
-      })
-      shown = false
+    // removeCookie()
+    // removeGACookies()
+    cookies.removeAll()
+
+    Object.entries(choicesDefaults).map(choice => {
+      if(choice[0] !== 'necessary') {
+        return choice[1].value = false
+      }
+    })
+    shown = false
     }
   
     function chosenMatchesChoice (cookie) {
