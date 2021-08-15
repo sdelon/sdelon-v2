@@ -1,7 +1,9 @@
 /* Write your global styles here, in PostCSS syntax */
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
 
 .container {
     @apply max-w-7xl mx-auto px-4 sm:px-6;
@@ -18,3 +20,6 @@
 main img {
     content-visibility: auto;
 }
+
+@tailwind components;
+@tailwind utilities;

@@ -17,13 +17,23 @@
 
     if(is_analytics) {
       window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('consent', 'default', {
-            'ad_storage': 'denied',
-            'analytics_storage': is_analytics ? 'granted' : 'denied'
-        });
-        gtag('js', new Date());
-        gtag('config', 'G-TMX3F24LXV');
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+          'ad_storage': 'denied',
+          'analytics_storage': 'granted'
+      });
+      gtag('js', new Date());
+      gtag('config', 'G-TMX3F24LXV');
+    } else {
+      window['ga-disable-G-TMX3F24LXV'] = true;
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+          'ad_storage': 'denied',
+          'analytics_storage': 'denied'
+      });
+      gtag('js', new Date());
+      gtag('config', 'G-TMX3F24LXV');
     }
   }
 </script>
