@@ -1,5 +1,5 @@
 <script>
-    import logoSD from '/static/assets/logo-sd-bleu.png'
+    import logoSD from '/assets/logo-sd-bleu.png'
     import NavList from '$lib/UI/NavList.svelte'
     import CTALink from '$lib/UI/CTALink.svelte'
 

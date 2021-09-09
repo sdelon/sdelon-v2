@@ -1,9 +1,9 @@
 <script>
     import NavList from '$lib/UI/NavList.svelte'
-    import logoSD from '/static/assets/logo-sd-bleu.png'
-    import urlFb from '/static/assets/icon-library.svg#icon-facebook'
-    import urlTwitter from '/static/assets/icon-library.svg#icon-twitter'
-    import urlLinkedIn from '/static/assets/icon-library.svg#icon-linkedin'
+    import logoSD from '/assets/logo-sd-bleu.png'
+    import urlFb from '/assets/icon-library.svg#icon-facebook'
+    import urlTwitter from '/assets/icon-library.svg#icon-twitter'
+    import urlLinkedIn from '/assets/icon-library.svg#icon-linkedin'
 
     $: year = new Date().getFullYear()
 </script>

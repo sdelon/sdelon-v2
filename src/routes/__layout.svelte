@@ -39,7 +39,18 @@
 </script>
 
 <svelte:head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TMX3F24LXV"></script>
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-TMX3F24LXV"></script> -->
+  <script>
+      window.axeptioSettings = {
+        clientId: "6139c090defe3c3e027781ae",
+      };
+      
+      (function(d, s) {
+        var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+        e.async = true; e.src = "//static.axept.io/sdk.js";
+        t.parentNode.insertBefore(e, t);
+      })(document, "script");
+    </script>
 </svelte:head>
 
 <Nav />
@@ -47,10 +58,10 @@
     <slot />
 </main>
 <Footer />
-<CookieConsent 
+<!-- <CookieConsent 
 {color_primary} 
 {color_secondary} 
 cookieName="sdelon_cookie_consent" 
 description="En autorisant l'utilisation des cookies - petit fichier texte déposé sur votre ordinateur lors de votre visite sur le site - vous acceptez le dépôt et la lecture de cookies et l'utilisation de technologies de suivi nécessaires à leur bon fonctionnement." 
 {choices} 
-on:analytics={initAnalytics} />
+on:analytics={initAnalytics} /> -->
