@@ -10,7 +10,7 @@
 </script>
 
 <script>
-    import illu404 from '/assets/urban-681.png'
+    import illu404 from '../../static/assets/urban-681.png'
 	export let status
 </script>
 
