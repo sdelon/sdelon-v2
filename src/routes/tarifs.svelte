@@ -50,7 +50,7 @@
             </div>
             <div class="w-full lg:w-1/2 px-3 lg:bg-blueGray-50 mb-12 lg:mb-0">
                 <div class="flex items-center justify-center">
-                    <img class="lg:max-w-lg" src="./static/assets/wireframe-tarifs-1.jpg" alt="Wireframe d'un site">
+                    <img class="lg:max-w-lg" src="https://images.prismic.io/sdelon-portfolio/69ea72d3-098c-4472-a834-91f548ff4977_wireframe-tarifs-1.jpg?auto=compress,format" alt="Wireframe d'un site">
                 </div>
             </div>
         </div>
@@ -320,7 +320,7 @@
     <div class="md:w-1/2 px-4 mb-8 md:mb-0">
         <div class="flex-grow w-auto h-auto">
             <Img
-              src="./static/assets/wireframe-tarifs-2.jpg"
+              src="https://images.prismic.io/sdelon-portfolio/53fd25e7-cff7-4f21-aa64-f73c519734b6_wireframe-tarifs-2.jpg?auto=compress,format"
               mq_sizes="(min-width: 760px) 50vw, 100vw"
               alt="Wireframe d'un site"
               styles="rounded shadow" />
