@@ -27,5 +27,10 @@ module.exports = {
 			dropShadow: ['group-hover']
 		}
 	},
+	variants: {
+		extend: {
+			backgroundColor: ['active'],
+		}
+	},
 	plugins: [],
 };
