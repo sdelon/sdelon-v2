@@ -6,40 +6,24 @@
 </script>
 
 <svelte:head>
-  <script>
-      window.axeptioSettings = {
-        clientId: "6139c090defe3c3e027781ae",
-      };
-      
-      (function(d, s) {
-        var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
-        e.async = true; e.src = "//static.axept.io/sdk.js";
-        t.parentNode.insertBefore(e, t);
-      })(document, "script");
-    
-    function launchGA(){
-      var el = document.createElement('script');
-      el.setAttribute('type', 'text/javascript');
-      el.setAttribute('async', true);
-      el.setAttribute('src', '//www.googletagmanager.com/gtag/js?id=G-TMX3F24LXV');
-      document.body.append(el); window.dataLayer = window.dataLayer || [];
-
-      function gtag(){ dataLayer.push(arguments); }
-      
-      gtag('js', new Date());
-      gtag('config', 'UA-234217-21', { 'anonymize_ip': true });
-      gtag('config', 'UA-234217-21', {'link_attribution': true});
-    }
-    // La fonction qui relie Axeptio au lancement du cookie Google Analytics
-    void 0 === window._axcb && (window._axcb = []);
-    window._axcb.push(function(axeptio) {
-        axeptio.on("cookies:complete", function(choices) {
-        if(choices.google_analytics) {
-          launchGA();
-          }
-        });
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N97DMSN');
+</script>
+<script type="text/javascript">
+  (adsbygoogle = window.adsbygoogle || []).pauseAdRequests = 1;
+  (_axcb = window._axcb || []).push(function(sdk) {
+    sdk.on('cookies:complete', function(choices) {
+      if (!choices['Google Ads']) {   
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
+      }
+      window.adsbygoogle.pauseAdRequests = 0;
     });
-    </script>
+  });
+  </script>
 </svelte:head>
 
 <Nav />
