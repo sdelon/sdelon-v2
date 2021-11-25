@@ -36,14 +36,14 @@
         <h2 class="mt-2 text-4xl lg:text-5xl font-bold font-heading text-gray-800">Le Cap Sizun en 
           <span class="relative">
           photos
-          <div class="svg-shadow absolute -bottom-7 -right-8">
+          <div class="svg-shadow absolute -bottom-9 -right-12">
             <svg width="176" height="78" viewBox="0 0 176 78" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M4.16866 49.7734C49.6249 56.8271 214.397 64.3995 159.471 26.2365" stroke="#F9F871" stroke-width="6" stroke-linecap="round"/>
               </svg>
           </div>
         </span>
       </h2>
-        <p class="text-gray-600 max-w-md pt-4">La photographie est une de mes passions depuis de nombreuses années et comment ne pas être inspirée par la beauté époustouflante et sauvage du Cap Sizun !</p>
+        <p class="text-gray-600 max-w-md pt-8">La photographie est une de mes passions depuis de nombreuses années et comment ne pas être inspirée par la beauté époustouflante et sauvage du Cap Sizun !</p>
       </div>
     </div>
     {#each photographies.data.body as slice}

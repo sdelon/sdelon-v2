@@ -15,8 +15,8 @@
       </a>
       <nav>
           <NavList 
-          styles="my-6 flex flex-wrap gap-4 lg:gap-8 items-center justify-center"
-          item_styles="mb-2 md:mb-0"
+          styles="my-6 flex flex-wrap items-center justify-center"
+          item_styles="mb-2 md:mb-0 mr-4"
           link_styles="text-lg font-medium text-bleu-dark hover:text-bleu-lighter"/>
       </nav>
       <div>
