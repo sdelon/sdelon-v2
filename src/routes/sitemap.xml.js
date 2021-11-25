@@ -7,16 +7,30 @@ export async function get() {
         return !filters.find(filter => page.includes(filter))
     })
     .map(page => {
-        return page.replace('/src/routes', import.meta.env.VITE_PUBLIC_BASE_PATH).replace('/index.svelte', '').replace('.svelte', '')
+        return page.replace('/src/routes', 'https://sdelon.com').replace('/index.svelte', '').replace('.svelte', '')
     })
 
     const allSiteURL = pages
-    .flat()
     .reduce((newArr, currItem) => {     
         let node = {}
-
         switch(currItem) {
+            case 'https://sdelon.com':
+                node = {
+                    loc: `${currItem}`,
+                    priority: '1',
+                    changefreq: 'yearly',
+                    date
+                }
+                break;
             case 'https://sdelon.com/mentions-legales':
+                node = {
+                    loc: `${currItem}`,
+                    priority: '0.5',
+                    changefreq: 'never',
+                    date
+                }
+                break;
+            case 'https://sdelon.com/merci':
                 node = {
                     loc: `${currItem}`,
                     priority: '0.5',
@@ -32,7 +46,14 @@ export async function get() {
                     date
                 }
                 break;
-            case 'https://sdelon.com':
+            case 'https://sdelon.com/tarifs':
+                node = {
+                    loc: `${currItem}`,
+                    priority: '1',
+                    changefreq: 'yearly',
+                    date
+                }
+                break;
             case 'https://sdelon.com/photographies':
                 node = {
                     loc: `${currItem}`,
@@ -47,10 +68,10 @@ export async function get() {
         return newArr
     }, [])
     
-
     
     const urlNodes = allSiteURL
     .map((page) => {
+
         return `
             <url>
                 <loc>${page.loc}</loc>
@@ -60,8 +81,7 @@ export async function get() {
             </url>
         `;
     })
-    .join('\n');
-
+    .join('');
 
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -76,7 +96,8 @@ export async function get() {
     return {
         body: xml,
         headers: {
-            'Content-Type': 'application/xml'
+            'Cache-Control': 'max-age=0, s-maxage=3600',
+            'Content-Type': 'application/xml',
         }
     }
 }
