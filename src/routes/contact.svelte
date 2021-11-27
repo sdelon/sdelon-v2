@@ -14,8 +14,8 @@
 </style>
 
 <SEOHead
-	title="Contact | Stéphanie Delon"
-	description="Trouvons ensemble une solution adaptée à vos besoins ! | Stéphanie Delon - développeuse web et graphiste"
+	title="Contact | Stéphanie Delon  - marketing digital"
+	description="Développeuse web et graphiste située dans le Cap Sizun en Finistère - Développement d'une stratégie digitale autour de votre activité | Stéphanie Delon"
 	image=""
 	alt="" />
 

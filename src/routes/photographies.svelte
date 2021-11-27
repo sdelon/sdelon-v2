@@ -24,8 +24,8 @@
 </script>
 
 <SEOHead
-	title="Photographies | Stéphanie Delon"
-	description="Développeuse web et graphiste située dans le Cap Sizun en Finistère, je suis également passionnée par la photographie | Stéphanie Delon"
+	title="Photographies | Stéphanie Delon - marketing digital"
+	description="Développeuse web et graphiste située dans le Cap Sizun en Finistère - Développement d'une stratégie digitale autour de votre activité | Stéphanie Delon"
 	image="https://images.prismic.io/sdelon-portfolio/1a2052cd-b1cd-4e96-bb47-9938c0ca6b69_falaise.jpg?auto=compress,format"
 	alt="Côte Nord du Cap Sizun" />
 
